@@ -19,7 +19,7 @@ steps:
     composition_candidates:
       test:
         image: alpine:latest
-        command: sh -c 'ls db_data'
+        command: sh -c 'ls db_data && rm -rf'
         volumes:
           - ./:/db_data
 
