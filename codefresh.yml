@@ -19,8 +19,11 @@ steps:
             - 27017
     composition_candidates:
       test:
-        image: '${{build_step}}'
-        command: npm test
+        image: alpine:latest
+        command: sh -c 'ls db_data'
+        volumes:
+          - ./:/db_data
+
 
 #  push_to_registry:
 #    title: Push To Registry
