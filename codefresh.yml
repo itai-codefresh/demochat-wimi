@@ -9,7 +9,6 @@ steps:
 
   unit_test:
     type: composition
-    working_directory: '${{main_clone}}'
     composition:
       version: '2'
       services:
