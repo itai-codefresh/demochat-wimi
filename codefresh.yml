@@ -19,7 +19,7 @@ steps:
     composition_candidates:
       test:
         image: alpine:latest
-        command: sh -c 'ls db_data && rm -rf'
+        command: sh -c 'ls db_data && rm -rf cf-generated-docker-compose.yaml'
         volumes:
           - ./:/db_data
 
