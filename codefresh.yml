@@ -11,6 +11,12 @@ steps:
     type: composition
     working_directory: '${{main_clone}}'
     composition: ./docker-compose.yml
+    composition_candidates:
+      test:
+        image: alpine:latest
+        command: sh -c 'ls db_data'
+        volumes:
+          - ./:/db_data
 
 
 #  push_to_registry:
