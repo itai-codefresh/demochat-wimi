@@ -6,6 +6,11 @@ steps:
     dockerfile: Dockerfile
     image_name: containers101/demochat
     tag: '${{CF_BRANCH}}'
+    
+  free_me:
+    title: freestyle1
+    image_name: alpine:latest
+    command: 'echo hello'
 
   unit_test:
     type: composition
@@ -22,6 +27,11 @@ steps:
         command: sh -c 'ls db_data'
         volumes:
           - ./:/db_data
+          
+  free_me1:
+    title: freestyle2
+    image_name: alpine:latest
+    command: 'echo hello'
 
 
 #  push_to_registry:
