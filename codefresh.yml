@@ -10,7 +10,7 @@ steps:
   free_me:
     title: freestyle1
     image: alpine:latest
-    command: 'echo hello'
+    command: echo hello
 
   unit_test:
     type: composition
@@ -31,7 +31,7 @@ steps:
   free_me1:
     title: freestyle2
     image: alpine:latest
-    command: 'echo hello'
+    command: echo hello
 
 
 #  push_to_registry:
