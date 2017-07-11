@@ -9,7 +9,7 @@ steps:
     
   free_me:
     title: freestyle1
-    image_name: alpine:latest
+    image: alpine:latest
     command: 'echo hello'
 
   unit_test:
@@ -30,7 +30,7 @@ steps:
           
   free_me1:
     title: freestyle2
-    image_name: alpine:latest
+    image: alpine:latest
     command: 'echo hello'
 
 
