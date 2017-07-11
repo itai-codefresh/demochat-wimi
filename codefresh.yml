@@ -7,7 +7,7 @@ steps:
     image_name: containers101/demochat
     tag: '${{CF_BRANCH}}'
     
-  free_me:
+  free_me1:
     title: freestyle1
     image: alpine:latest
     commands: 
@@ -30,7 +30,7 @@ steps:
           - ./:/db_data
           
   free_me:
-    title: freestyle2
+    title: freestyle1
     image: alpine:latest
     commands: 
       - echo hello
