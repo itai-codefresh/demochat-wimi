@@ -29,7 +29,7 @@ steps:
         volumes:
           - ./:/db_data
           
-  free_me1:
+  free_me:
     title: freestyle2
     image: alpine:latest
     commands: 
