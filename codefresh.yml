@@ -5,39 +5,11 @@ steps:
     type: build
     dockerfile: Dockerfile
     image_name: containers101/demochat
-    tag: '${{CF_BRANCH}}'
+    tag: master
     
-  free_me1:
-    title: freestyle1
-    image: alpine:latest
-    commands: 
-      - echo hello
-
-  unit_test:
-    type: composition
-    composition:
-      version: '2'
-      services:
-        mongo:
-          image: 'mongo:latest'
-          ports:
-            - 27017
-    composition_candidates:
-      test:
-        image: alpine:latest
-        command: sh -c 'ls db_data'
-        volumes:
-          - ./:/db_data
-          
-  free_me:
-    title: freestyle1
-    image: alpine:latest
-    commands: 
-      - echo hello
-
-#  push_to_registry:
-#    title: Push To Registry
-#    type: push
-#    candidate: ${{build_step}}
-#    tag: ${{CF_BRANCH}}
-
+  launch_composition:
+    title: Launch Composition
+    type: launch-composition
+    composition: docker-compose.yml
+    environment_name: 'staging'
+    entry_point: nginx
