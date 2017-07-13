@@ -12,4 +12,4 @@ steps:
     type: launch-composition
     composition: docker-compose.yml
     environment_name: 'staging'
-    entry_point: nginx
+    entry_point: demochat
