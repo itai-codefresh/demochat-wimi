@@ -6,6 +6,6 @@ services:
   demochat:
     build: .
     ports:
-      - 5000
+      - 5000:5555
   mongo:
     image: mongo
