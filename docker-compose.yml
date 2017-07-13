@@ -6,6 +6,6 @@ services:
   demochat:
     image: containers101/demochat:master
     ports:
-      - 5000:5555
+      - 5555:5000
   mongo:
     image: mongo
