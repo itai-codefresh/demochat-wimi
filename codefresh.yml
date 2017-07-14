@@ -6,7 +6,7 @@ steps:
     image: alpine:latest
     fail_fast: false
     commands:
-      - cf_export SOME=alpine:latest 
+      - cf_export SOME=alpine:latest SOME2=myval 
          
   unit_testss:
     title: Unit Tests
