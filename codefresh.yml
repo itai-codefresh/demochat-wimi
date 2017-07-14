@@ -19,9 +19,15 @@ steps:
       - echo $SOME
       - echo $SOME1
     
-  #launch_composition:
-    #title: Launch Composition
-    #type: launch-composition
-    #composition: docker-compose.yml
-    #environment_name: 'staging'
-    #entry_point: demochat
+  launch_composition:
+    title: Launch Composition
+    type: launch-composition
+    composition: docker-compose.yml
+    environment_name: 'staging'
+    entry_point: demochat
+    composition_candidates:
+      test_service:
+        image: ${{SOME}}
+        command: echo $KEY
+    composition_variables:
+      - KEY=value
