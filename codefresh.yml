@@ -8,6 +8,7 @@ steps:
     commands:
       - export KEY=myval
       - cf_export SOME=alpine:latest KEY 
+      - env
          
   unit_testss:
     title: Unit Tests
