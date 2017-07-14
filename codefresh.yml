@@ -12,11 +12,11 @@ steps:
     image: alpine:latest
     fail_fast: false
     commands:
-      - cf_export SOME=VALUE1
+      - cf_export SOME=alpine:latest
          
   unit_testss:
     title: Unit Tests
-    image: ${{MY_IMAGE}}
+    image: ${{SOME}}
     fail_fast: false
     commands:
       - env
