@@ -21,7 +21,7 @@ steps:
     
   launch_composition:
     title: Launch Composition
-    type: launch-composition
+    type: composition
     composition: docker-compose.yml
     environment_name: 'staging'
     entry_point: demochat
