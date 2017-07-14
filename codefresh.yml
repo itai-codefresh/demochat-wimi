@@ -19,6 +19,7 @@ steps:
     commands:
       - echo $SOME
       - echo $SOME1
+      - cat ${{CF_VOLUME_PATH}}/env_vars_to_export
     
   launch_composition:
     title: Launch Composition
