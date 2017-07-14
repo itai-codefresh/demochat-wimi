@@ -12,14 +12,18 @@ steps:
     image: alpine:latest
     fail_fast: false
     commands:
-      - cf_export SOME=alpine:latest
+      - cf_export SOME=alpine:latest SOME1=myval
          
   unit_testss:
     title: Unit Tests
     image: ${{SOME}}
     fail_fast: false
+    environment:
+      - SOME=myvalue
+      - SOME1=myval
     commands:
-      - env
+      - echo $SOME
+      - echo $SOME1
     
   #launch_composition:
     #title: Launch Composition
