@@ -6,7 +6,7 @@ steps:
     image: alpine:latest
     fail_fast: false
     commands:
-      - cf_export SOME=alpine:latest SOME1=myval
+      - cf_export SOME=alpine:latest 
          
   unit_testss:
     title: Unit Tests
@@ -14,7 +14,7 @@ steps:
     fail_fast: false
     environment:
       - SOME=myvalue
-      - SOME1=myval
+      - SOME1=myvalll
     commands:
       - echo $SOME
       - echo $SOME1
